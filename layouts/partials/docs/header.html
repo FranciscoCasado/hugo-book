@@ -3,10 +3,15 @@
     <img src="{{ "svg/menu.svg" | relURL }}" class="book-icon" alt="Menu" />
   </label>
 
+  {{ if isset .Params "number" }}
+    Comisión {{index .Params "number"}}
+  {{ end }}
   <strong>
-    {{ if isset .Page.Params "weight" }}
-    Comisión {{index .Page.Params "weight"}}
-  {{ end }}</strong>
+    {{ partial "docs/title" . | emojify}}
+  </strong>
+
+
+<hr>
 
   <label for="toc-control">
     {{ if default true (default .Site.Params.BookToC .Params.BookToC) }}
