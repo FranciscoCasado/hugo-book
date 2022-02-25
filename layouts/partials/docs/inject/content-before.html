@@ -1,0 +1,8 @@
+{{ if isset .Params "number" }}
+  <h2>Comisión {{index .Params "number"}}</h2>
+{{ end }}
+
+{{ partial "docs/title" . | emojify}}
+
+<hr>
+<br>

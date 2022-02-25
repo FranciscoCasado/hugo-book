@@ -37,6 +37,10 @@
     </label>
   {{ else if .Page.Content }}
     <a href="{{ .Page.RelPermalink }}" class="{{ if $current }} active{{ end }}">
+      {{ if isset .Page.Params "weight" }}
+        Comisión {{index .Page.Params "weight"}}
+      {{ end }}
+      <br>
       {{- partial "docs/title" .Page -}}
     </a>
   {{ else }}

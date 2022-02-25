@@ -3,7 +3,10 @@
     <img src="{{ "svg/menu.svg" | relURL }}" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>{{ partial "docs/title" . }}</strong>
+  <strong>
+    {{ if isset .Page.Params "weight" }}
+    Comisión {{index .Page.Params "weight"}}
+  {{ end }}</strong>
 
   <label for="toc-control">
     {{ if default true (default .Site.Params.BookToC .Params.BookToC) }}
