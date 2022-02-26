@@ -73,3 +73,12 @@
 li.disabled::after {
     background-image: url("icons/pending.svg");
 }
+
+.articulo {
+    margin-bottom: $padding-16 * 1.5;
+    
+    p {
+        margin: 0;
+        margin-bottom: 0.8em;
+    }
+}
