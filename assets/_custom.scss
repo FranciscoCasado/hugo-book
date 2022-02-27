@@ -2,6 +2,8 @@
 
 // @import "plugins/numbered";
 
+
+
 .comisiones ol, ul{
     counter-reset: coms;
     list-style: none;
@@ -15,7 +17,7 @@
     padding: 0;
     min-height: 3em;
     margin-bottom: 0.5em;
-    border: 1px solid #dadada;
+    border: 1px solid var(--gray-200);
     
     a {
         display: block;
@@ -56,11 +58,11 @@
 }
 
 .disabled {
-    background-color: #f3f3f3;
-    color: #444;
-    border: 1px solid white ;
+    background-color: var(--gray-100);
+    color: var(--gray-700);
+    border: 1px solid var(--gray-100) ;
     a {
-        color: #666;
+        color: var(--gray-700);
         pointer-events: none;
     }    
 }
@@ -84,9 +86,9 @@ li.disabled::after {
 }
 
 .menu-sitio-oficial-convencion {
-    color: #444;
+    color: var(--gray-700);
     a {
-        color: black;
+        color: var(--body-font-color);
         text-decoration: underline;
     }
 }
